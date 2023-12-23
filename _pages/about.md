@@ -1,26 +1,27 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: B.S. in Computer Engineering at <a href='https://www.eecs.psu.edu/'>Penn State</a>.
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic.webp
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <a href="mailto:bharavimisra@gmail.com">bharavimisra@gmail.com</a>
+    <a href="tel:+14849258392">(484) 925-8392</a>
 
-news: true  # includes a list of news items
-latest_posts: true  # includes a list of the newest posts
-selected_papers: true # includes a list of papers marked as "selected={true}"
+
+
+
+news: false  # includes a list of news items
+latest_posts: false  # includes a list of the newest posts
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
+Hello! My name is Bharavi Misra, and I am a third year undergraduate [Schreyer](https://www.shc.psu.edu/) honors scholar at Penn State University studying Computer Engineering. I have previously worked at [Siemens Digital Industries Software](https://www.sw.siemens.com/en-US/) as a SWE intern and the [Materials Research Institute](https://www.sw.siemens.com/en-US/) at Penn State as an undergraduate fellow. 
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+At Penn State, I am involved with the [College of Engineering's Engineering Ambassadors](https://www.leonhardcenter.psu.edu/engineering-ambassadors/index.aspx) program, [HackPSU](https://hackpsu.org/), and am pursuing an undergraduate thesis under [Professor Jinghui Chen](https://jinghuichen.github.io/)'s supervision.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I am interested in deep learning, computer vision, and boosting my coding skills in general! This site serves as a place for me to showcase my journey as a budding software engineer and ML enthusiast. 
