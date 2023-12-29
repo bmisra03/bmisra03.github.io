@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: B.S. in Computer Engineering at <a href='https://www.eecs.psu.edu/'>Penn State</a>.
+subtitle: B.S. in Computer Engineering at <a href='https://www.psu.edu/'>Penn State</a>.
 
 profile:
   align: right

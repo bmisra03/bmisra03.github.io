@@ -169,6 +169,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  summaries:
+    output: true
+    permalink: /summaries/:path/
 
 announcements:
   enabled: true
@@ -270,15 +273,15 @@ display_categories: ['blockquotes'] # these categories will be displayed on the 
 
 scholar:
 
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Misra]
+  first_name: [Bharavi]
 
   style: apa
   locale: en
 
   source: /_bibliography/
-  bibliography: papers.bib
-  bibliography_template: bib
+  bibliography: summaries.bib
+  bibliography_template: custom_bib
   # Note: if you have latex math in your bibtex, the latex filter
   # preprocessing may conflict with MathJAX if the latter is enabled.
   # See https://github.com/alshedivat/al-folio/issues/357.
@@ -292,8 +295,6 @@ scholar:
   details_link: Details
 
   query: "@*"
-  group_by: year
-  group_order: descending
 
 # Display different badges withs stats for your publications
 enable_publication_badges:
