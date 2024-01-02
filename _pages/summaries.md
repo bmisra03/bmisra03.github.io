@@ -4,10 +4,10 @@ permalink: /summaries/
 title: ML Paper Summaries
 description: >
 nav: true
-nav_order: 5
+nav_order: 2
 ---
 
-Summaries of papers I've read and find interesting. Covers the key points, criticisms, and my own implementation. Heavily inspired by [Fan Pu Zeng](https://fanpu.io/).
+Summaries of papers I've read and find interesting. Covers the key points, criticisms, and my own implementation (if applicable). Heavily inspired by [Fan Pu Zeng](https://fanpu.io/).
 
 {% include scripts/mathjax_macros.html %}
 
