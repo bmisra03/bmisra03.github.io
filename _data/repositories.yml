@@ -1,12 +1,11 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - bmisra03
+  - bbm5449
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - bmisra03/bmisra03.github.io
+  - bmisra03/spotify-data-visualizer
+  - bmisra03/cmpen454-project1
+  - bmisra03/cmpen454-project2
+  - bmisra03/CourseSchedulerModel
+  - bbm5449/CPU-Design-Optimization-Tool

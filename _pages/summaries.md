@@ -7,7 +7,11 @@ nav: true
 nav_order: 2
 ---
 
-Summaries of papers I've read and find interesting. Covers the key points, criticisms, and my own implementation (if applicable). Heavily inspired by [Fan Pu Zeng](https://fanpu.io/).
+Summaries of papers I've read and find interesting. Covers the key points, criticisms, and my own implementation/analysis of the code (if applicable). Heavily inspired by [Fan Pu Zeng's](https://fanpu.io/) blog. NOTE: these summaries contain information that I find most interesting, and will not necessarily go into detail about all points covered in their publications. 
+
+This page serves as a way to document my academic progress, as well as showcase my technical interests and analytical skills to anyone who may be interested. Most posts will pertain to the following topics: 
+
+__Deep Learning in Computer Vision, Federated Learning, ML Privacy and Security__
 
 {% include scripts/mathjax_macros.html %}
 

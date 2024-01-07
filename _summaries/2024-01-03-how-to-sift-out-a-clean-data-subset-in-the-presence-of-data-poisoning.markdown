@@ -90,6 +90,9 @@ The authors present their results for META-SIFT. Shown below are NCR results und
 
 As shown, the results demonstrate that META-SIFT is able to sift a dataset with 0 NCR and significant orders of magnitude less than than existing methods, for both CIFAR-10 and ImageNet datasets.
 
-### Most Glaring Deficiency
+### Criticism
+Although I am not yet knowledgeable enough on the topic to provide thorough critcism, there are some points I would like to note. The authors present the problem clearly, provide a thorough overview of the algorithm, and detailed steps for the implementation. However, as a reader, I found it a little difficult to interpret the results. For example, in the text, the authors state "Table 4 compares NCR of the five baselines and
+META-SIFT across different datasets with richer attack settings than Table 2." However, Table 4 does not include NCR scores for any of the datasets. In addition, I was unsure whether the results signified the effectiveness of different attacks on the datasets with or without META-SIFT. Although the authors clearly state the impact of data poisoning on defense algorithm effectiveness in the beginning of the paper, it is not explicity stated how downstream defense performance improves with the usage of META-SIFT for all datasets considered.
 
 ### Conclusions for Future Work
+The results are promising and demonstrate that META-SIFT is a computationally efficient and attack-agnostic way to sift a clean base set from poisoned data. As the authors state, future work should be focused on reducing the high memory overhead, identify ways META-SIFT can be attacked, and generalize the solution behind image classfication tasks.
