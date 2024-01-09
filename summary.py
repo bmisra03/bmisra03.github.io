@@ -23,7 +23,7 @@ def filename(title):
     title = re.sub("-+", "-", title)
     title = ''.join(e for e in title if e.isalnum() or e == "-")
     print("Filename", title)
-    return f"_summaries/{today}-{title}.markdown"
+    return f"_summaries/{today}-{title}.md"
 
 def eprint_without_version(eprint):
     return re.sub("v\d+", "", eprint)
@@ -45,7 +45,7 @@ bib_id: {bib_id}
 
 #### 3. Baz
 
-### Most Glaring Deficiency
+### Criticism
 
 ### Conclusions for Future Work
 """
