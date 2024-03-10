@@ -5,9 +5,9 @@ giscus_comments: false
 bib_id: 1602.05629
 ---
 
-### Three Main Points
+### Three main points
 
-#### 1. Training on Decentralized Data from Mobile Devices
+#### 1. Training on decentralized data from mobile devices
 Many deep learning applications have the following characteristics: 
 - Training on real-world data from mobile devices provides an advantage over training on public or proxy data available to servers.
 - Training data is privacy-sensitive or too large to store in a data center.
@@ -27,7 +27,7 @@ The authors also describe key characteristics of the "Federated Optimization" pr
 - Massively distributed, since the authors expect the total number of clients to be much greater than the amount of data available per client. 
 - Limited communications, since devices are frequently offline or on slow/expensive connections.
 
-#### 2. FederatedAveraging Algorithm
+#### 2. FederatedAveraging algorithm
 
 The authors use stochastic gradient descent (SGD) as a baseline to compare their algorithm with. They select a random $$C$$-fraction of clients each round and compute the gradient of loss over all data held in these clients. Thus, for a current model $$w_t$$ with $$C=1$$ and learning rate $$\eta$$, the server computes the update $$w_t \leftarrow w_t - \eta \sum_{k=1}^{K}\frac{n_j}{n}g_k$$. In other words, the server takes the weighted average of each client locally taking one step of gradient descent on the current model. The authors extend this algorithm by allowing each client to perform multiple local updates before averaging gradients. Thus, the total computation is controlled by three parameters: 
 - $$C$$- fraction of clients that perform computation per round. C = 0 corresponds to 1 client per round.
@@ -41,7 +41,7 @@ The full algorithm is shown below:
     class="z-depth-1"
 %}
 
-#### 3. Experimental Results
+#### 3. Experimental results
 The authors present results for for datasets total. The first study includes three model families on two datasets. 
 
 The first two models (multilayer-perceptron and convolution neural network) are used for the MNIST digit recognition task. They study two ways of partitioning the data: __IID__ (data shuffled, partitioned into 100 clients each receiving 600 samples) and __Non-IID__ (sort data by digit label, divide into 200 shards of size 300, and assign each of 100 clients 2 shards). The next model (stacked character-level LSTM language model) is used on a dataset build from _The Complete Works of William Shakespeare_. They again create an __IID__ and __Non-IID__ version of the dataset, with an 80% train-test split each. 
@@ -78,5 +78,5 @@ The authors also run experiments on the CIFAR-10 dataset and a large-scale next-
 ### Criticism
 No criticism. Paper was easy to follow and provided convincing results.
 
-### Conclusions for Future Work
+### Conclusions for future work
 The paper demonstrates that federated learning can be a practical solution to solving deep learning problems that require user data privacy.

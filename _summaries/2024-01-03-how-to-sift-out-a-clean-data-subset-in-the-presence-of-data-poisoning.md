@@ -5,9 +5,9 @@ giscus_comments: false
 bib_id: 2210.06516v2
 ---
 
-### Three Main Points
+### Three main points
 
-#### 1. Sifting Out a Clean Enough Base Set is Hard
+#### 1. Sifting out a clean enough base set is hard
 Many popular defense algorithms require access to clean base sets in order to be effective. For example, a common Trojan-Net Detection approach is to generate potential triggers from a target model, and seeing if applying those triggers to a clean data set leads to suspicious results. Likewise, a common defense against Label-Flipping attacks is to find a subset of label-feature pairings, such that its exclusion from the training dataset leads to maximal accuracy when testing on a clean base set.
 
 A chart showing the performance of four common defense paradigms when given access to clean base sets (green) vs contaminated base sets (red) is shown below. The yellow row contains baselines results (either random guessing as a defense strategy or no defense used). Poison Detection was evaluated using __Poison Filtering Rate (PFR)__, which measures the ratio of poisoned samples that are correctly detected. Trojan-Net Detection was evaluated using __Area Under the ROC Curve (AUC)__, which measures the entire 2-D area underneath the ROC curve. Backdoor Removal was evaluated using __Attack Success Rate (ASR)__, which calculates the frequency with which non-target-class samples patched with the backdoor trigger are misclassified into the attacker-desired target class. Finally, Robust Training was evaluated using __Test Accuracy (ACC)__, which measures the accuracy of the trained model on a clean test set. __In all instances, not having access to a clean base set significantly reduced defense performance.__
@@ -64,7 +64,7 @@ $$
 \end{align*}
 $$
 
-#### 3. Implementation and Results
+#### 3. Implementation and results
 The authors separate the sifting process into two stages; training and identification. A sifter is defined as the combination of $$\mathcal{S}(\cdot)$$ parameterized by $$\psi^*$$ and the classification model parameterized by $$\theta^*$$. The training stage produces _m_ sifters, and the identification stage assigns weights to the data in the dataset. An overview of the process is outlined below: 
 
 {% include figure.html
@@ -93,5 +93,5 @@ As shown, the results demonstrate that META-SIFT is able to sift a dataset with 
 Although I am not yet knowledgeable enough on the topic to provide thorough critcism, there are some points I would like to note. The authors present the problem clearly, provide a thorough overview of the algorithm, and detailed steps for the implementation. However, as a reader, I found it a little difficult to interpret the results. For example, in the text, the authors state "Table 4 compares NCR of the five baselines and
 META-SIFT across different datasets with richer attack settings than Table 2." However, Table 4 does not include NCR scores for any of the datasets. In addition, I was unsure whether the results signified the effectiveness of different attacks on the datasets with or without META-SIFT. Although the authors clearly state the impact of data poisoning on defense algorithm effectiveness in the beginning of the paper, it is not explicity stated how downstream defense performance improves with the usage of META-SIFT for all datasets considered.
 
-### Conclusions for Future Work
+### Conclusions for future work
 The results are promising and demonstrate that META-SIFT is a computationally efficient and attack-agnostic way to sift a clean base set from poisoned data. As the authors state, future work should be focused on reducing the high memory overhead, identify ways META-SIFT can be attacked, and generalize the solution behind image classfication tasks.

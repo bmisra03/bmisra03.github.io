@@ -5,9 +5,9 @@ giscus_comments: true
 bib_id: 1708.06733
 ---
 
-### Three Main Points
+### Three main points
 
-#### 1. Outsourcing Model Training Can Make it Vulnerable to Backdoors
+#### 1. Outsourcing model training can make it vulnerable to backdoors
 Due to the proven effectiveness of deep learning architectures on a wide range of applications, the demand for them has exploded. However, due to the high computational cost associated with training models, many companies/individuals have chosen to outsource trianing to the cloud, or to fine-tune pretrained models and apply them to new problems. 
 
 The authors propose that both these scenarios raise security concerns by introducing the possibility of __backdoored neural networks__, or __BadNets__. In this scenario, parts of the model training process are outsourced to hosts who want to provide the user with a model that has been trained to have a backdoor. The models necessarily must perform well on most inputs, but cause misclassifications on specific backdoored inputs. These misclassifications can either be targeted (i.e., flipping the labels of two specified classes), or untargeted, leading to an overall decrease in classification accuracy for certain inputs. The method through which a bad actor could backdoor a model is shown below. 
@@ -20,7 +20,7 @@ The authors propose that both these scenarios raise security concerns by introdu
 
 The model on the left depicts a benign classifier; given a set of inputs, it classifies them as expected. The model in the middle depicts the ideal behavior of a backdoor network- it uses a separate model to identify trigger inputs and the output of the model takes into account both the benign classifier and the backdoored classifier. The image on the right depicts a realistic manifestation of a backdoored model; since a malicious actor cannot change the model architecture itself, it must influence behavior by altering weights. 
 
-#### 2. Case Study: MNST Digit Recognition Attack
+#### 2. Case study: MNST digit recognition attack
 The authors first explore the impact of backdoors on handwritten digit classification using the MNIST dataset. The baseline model is a CNN with two convolution layer and two fully connected layers. The authors implement the back door by __training set poisoning__, in which they augment the training dataset with incorrectly labeled samples to influence model behavior. They use two different backdoors (single pixel backdoor and pattern backdoor, shown in the image below), as well as two different attack types: 
 - __Single target attack:__ the attack labels backdoored versions of digit i as digit j.
 - __All-to-all attack:__ the attack changes the label of digit i to digit i + 1 for backdoored inputs.
@@ -47,7 +47,7 @@ Similar results are observed for all-to-all attacks; BadNet successfully mislabe
     class="z-depth-1"
 %}
 
-#### 3. Case Study: Traffic Sign Detection Attack
+#### 3. Case study: traffic sign detection attack
 The authors train a backdoored road sign model using similar techniques as the MNIST dataset, and yield similar results. For sake of brevity and minimizing redundancy, I will let the reader review this section of the article on their own time. Instead, I will discuss the most challenging and (in my opinion) most interesting part of the paper; the ransfer learning attack. 
 
 The authors model their experiment on the following premise: a bad actor has trained a BadNet on US traffic signs, and uploaded their backdoored model in a public repository. An unassuming scientist downloads the model and retrains it to classify Swedish traffic signs. When applying transfer learning to CNNs, users often resize the output layer to account for differences in the number of classes, and retrain the fully connected layers on the new data. However, convolution layers are frequently left untouched, as they are considered feature extracters. Thus, malicious weights in the convolution layer can lead to poisoned results on a clean dataset. 
@@ -69,5 +69,5 @@ As the results demonstrate in the table below, a BadNet used for transfer learni
 ### Criticism
 No criticism. Paper was easy to follow and provided convincing results.
 
-### Conclusions for Future Work
+### Conclusions for future work
 The paper was a seminal work in identifying the vulnerabilites of outsourcing model training to third party sources. It demonstrated the vulnerabiliteis and dangers for researchers, students, developers, and companies using publically available models, and sparked a branch of research dedicated to identifying backdoors and ensuring safe access to pretrained models. 
