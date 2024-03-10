@@ -37,17 +37,17 @@ giscus_comments: true
 bib_id: {bib_id}
 ---
 
-### Three Main Points
+### Three main points
 
-#### 1. Foo
+#### 1. 
 
-#### 2. Bar
+#### 2. 
 
-#### 3. Baz
+#### 3. 
 
 ### Criticism
 
-### Conclusions for Future Work
+### Conclusions for future work
 """
 
 def create_summary_template(title, bib_id):
